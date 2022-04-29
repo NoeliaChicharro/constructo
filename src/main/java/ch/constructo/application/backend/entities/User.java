@@ -5,12 +5,14 @@ import ch.constructo.application.backend.enums.Role;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
+@Table(name = "constructo_user")
 public class User extends AbstractEntity {
 
   @Size(max = 100)
